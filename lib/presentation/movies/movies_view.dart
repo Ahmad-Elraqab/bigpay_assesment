@@ -119,8 +119,11 @@ class _MoviesViewState extends State<MoviesView> {
                                     ),
                                   );
                                 } else {
-                                  value2.getMoreMovies();
-                                  return const MovieShimmerBox();
+                                  if (value2.collection!.page! < 500) {
+                                    value2.getMoreMovies();
+                                    return const MovieShimmerBox();
+                                  }
+                                  return const SizedBox();
                                 }
                               },
                             ),
