@@ -22,7 +22,7 @@ void main() {
   );
   final obj = MockMovieRepository(restService: restService);
 
-  test('test fetching inital movie list', () async {
+  test('test fetching initial movie list', () async {
     final data = await obj.getMovies(page: 1);
 
     await expectLater(data, isNotNull);

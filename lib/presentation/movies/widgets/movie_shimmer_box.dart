@@ -8,8 +8,8 @@ class MovieShimmerBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
       direction: ShimmerDirection.ltr,
-      baseColor: Colors.grey.shade200,
-      highlightColor: Colors.white,
+      baseColor: Colors.grey.shade300,
+      highlightColor: Colors.grey.shade100,
       child: Container(
         margin: const EdgeInsets.all(6.0),
         decoration: BoxDecoration(

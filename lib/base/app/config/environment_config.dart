@@ -46,6 +46,4 @@ class EnvironmentConfig {
     baseApiUrl: 'https://api.themoviedb.org/3/',
     websocketUrl: 'wss://',
   );
-
-  ///endregion
 }
