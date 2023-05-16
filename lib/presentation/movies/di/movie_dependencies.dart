@@ -1,5 +1,5 @@
 import 'package:bigpay_assessment/data/repositories/movie_repository_impl.dart';
-import 'package:bigpay_assessment/domain/respositories/movie_respository.dart';
+import 'package:bigpay_assessment/domain/repositories/movie_repository.dart';
 import 'package:bigpay_assessment/domain/usecases/movie_usecases.dart';
 import 'package:bigpay_assessment/presentation/movies/view_models/movie_view_model.dart';
 import 'package:bigpay_assessment/presentation/movies/view_models/movie_widget_view_model.dart';

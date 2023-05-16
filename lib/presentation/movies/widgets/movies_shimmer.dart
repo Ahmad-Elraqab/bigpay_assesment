@@ -1,6 +1,5 @@
 import 'package:bigpay_assessment/presentation/movies/widgets/movie_shimmer_box.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 
 class MoviesShimmer extends StatefulWidget {
   const MoviesShimmer({super.key});
@@ -23,9 +22,7 @@ class _MoviesShimmerState extends State<MoviesShimmer> {
         ),
         itemCount: 8,
         itemBuilder: (context, index) {
-          for (var i = 0; i < 9;) {
-            return const MovieShimmerBox();
-          }
+          return const MovieShimmerBox();
         },
       ),
     );

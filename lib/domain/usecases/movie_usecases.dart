@@ -1,4 +1,4 @@
-import 'package:bigpay_assessment/domain/respositories/movie_respository.dart';
+import 'package:bigpay_assessment/domain/repositories/movie_repository.dart';
 
 class GetMoviesUseCase {
   final MovieRepository repository;

@@ -15,3 +15,9 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # bigpay_assesment
+
+<!-- instructions -->
+# run `flutter pub get`
+# if needed run build runner `flutter pub run build_runner build --delete-conflicting-outputs`
+# integration test available in the `/integration_test/movie_integration_test.dart` -> run/debug on vscode requires emulator.
+# unit test available in the `/test/unit_test/movie_unit_test.dart` -> run/debug on vscode.

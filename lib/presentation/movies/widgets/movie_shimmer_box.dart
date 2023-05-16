@@ -26,6 +26,5 @@ class MovieShimmerBox extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

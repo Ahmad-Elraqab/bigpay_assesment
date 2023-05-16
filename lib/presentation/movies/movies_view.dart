@@ -32,6 +32,7 @@ class _MoviesViewState extends State<MoviesView> {
       ),
       body: Consumer2<MovieWidgetViewModel, MovieViewModel>(
         builder: (context, value, value2, child) => RefreshIndicator(
+          key: const Key('movies_refresh_indicator'),
           onRefresh: () => value2.refreshMovieCollection(),
           child: value.isLoading
               ? const MoviesShimmer()
@@ -91,25 +92,30 @@ class _MoviesViewState extends State<MoviesView> {
                                 if (index < value2.collection!.movies!.length) {
                                   final item =
                                       value2.collection!.movies![index];
-                                  return Container(
-                                    margin: const EdgeInsets.all(6.0),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5.0),
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: NetworkImage(
-                                          item.posterPath.toString(),
+                                  return SizedBox(
+                                    key: Key(item.title.toString()),
+                                    child: Container(
+                                      key: const Key('movie_poster'),
+                                      margin: const EdgeInsets.all(6.0),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(5.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: NetworkImage(
+                                            item.posterPath.toString(),
+                                          ),
                                         ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            offset: const Offset(0, 5),
+                                            blurRadius: 5,
+                                            color: Colors.grey.shade200,
+                                            spreadRadius: 2,
+                                          ),
+                                        ],
+                                        color: Colors.white,
                                       ),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          offset: const Offset(0, 5),
-                                          blurRadius: 5,
-                                          color: Colors.grey.shade200,
-                                          spreadRadius: 2,
-                                        ),
-                                      ],
-                                      color: Colors.white,
                                     ),
                                   );
                                 } else {
